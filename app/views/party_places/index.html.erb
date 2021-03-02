@@ -1,2 +1,16 @@
 
 <h1>Party places</h1>
+
+<% @party_places.each do |party_place| %>
+  <div class="card-trip">
+  <%= cl_image_tag party_place.picture.key,width: 400, height: 300, crop: :fill %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= party_place.name %></h2>
+      <p><%= party_place.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= party_place.price_per_day %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+  </div>
+<% end %>
