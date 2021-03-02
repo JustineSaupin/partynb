@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: url(https://source.unsplash.com/random);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.form-outline{
+  width: 70vw;
+}
