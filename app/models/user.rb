@@ -9,4 +9,6 @@ class User < ApplicationRecord
   # As renter :
   has_many :reservations, foreign_key: 'renter_id'
 
+  has_one_attached :picture
+
 end
