@@ -2,8 +2,8 @@
 
 <div class="card-pp">
 
-  <img <%= cl_image_tag @party_place.picture.key,
-      width: 400, height: 360, crop: :fill %>>
+  <%= cl_image_tag @party_place.picture.key,
+      width: 400, height: 360, crop: :fill, class:"card-pp-img" %>
 
   <div class="card-pp-infos">
    <h4>DESCRIPTION : </h4>
@@ -14,7 +14,7 @@
     <p> <%= @party_place.address %> </p>
     </div>
      <h4> PRICE : </h4>
-   <p> <%= @party_place.price_per_day %> </p>
+   <p> <%= @party_place.price_per_day %> € </p>
   </div>
 </div>
 
