@@ -1,10 +1,10 @@
 <h1><%= @party_place.name %></h1>
 
 <div class="card-pp">
-
+  
   <%= cl_image_tag @party_place.picture.key,
       width: 400, height: 360, crop: :fill, class: "card-pp-img" %>
-
+  
   <div class="card-pp-infos">
    <h4>DESCRIPTION : </h4>
     <p><%= @party_place.description %></p>
