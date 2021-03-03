@@ -1,13 +1,25 @@
 <h1><%= @party_place.name %></h1>
-<p> <strong>ADRESSE :</strong>
-  <%= @party_place.address %></p>
-<p> <strong>DESCRIPTION :</strong>
-  <%= @party_place.description %></p>
 
-<div class="img-pp">
+<div class="card-pp">
 
-<%= cl_image_tag @party_place.picture.key,
+<img <%= cl_image_tag @party_place.picture.key,
       width: 400, height: 360, crop: :fill %>
 
-<%= link_to "Louez-moi", "#", class: "btn btn-flat" %>
+
+
+
+  <div class="card-pp-infos">
+   <h4>DESCRIPTION : </h4>
+    <p><%= @party_place.description %></p>
+
+  <div class="card-pp-adress">
+    <h4> ADRESSE : </h4>
+    <p> <%= @party_place.address %> </p>
+    </div>
+     <h4> PRICE : </h4>
+   <p> <%= @party_place.price_per_day %> </p>
+  </div>
 </div>
+
+  <h1><%= link_to "Louez-moi", "#", class: "btn btn-flat" %></h1>
+

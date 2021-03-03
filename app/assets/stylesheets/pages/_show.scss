@@ -1,14 +1,46 @@
-.img-pp {
 
-  position: center;
-  height: 180px;
+h1 {
+text-align: center;
+margin : 30px;
+font-weight: bolder;
+color: #6759A3;
+
+}
+
+.card-pp {
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 24px;
+  margin-left: 120px;
+}
+
+.card-pp img {
+  height: 100%;
+  width: 350px;
+  margin-right: 40px;
+  border-radius: 3px;
+}
+
+
+.card-pp h4 {
+  font-size: 18px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0;
+}
+
+.card-pp p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-pp .card-pp-infos {
+  padding: 16px;
+
+}
+
+.card-pp-adress {
+  margin-top: 32px;
 }
