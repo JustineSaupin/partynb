@@ -7,6 +7,7 @@ class ReservationsController < ApplicationController
     # we need `party_place_id` to associate resa with corresponding pp
     @party_place = PartyPlace.find(params[:party_place_id])
     @reservation.renter = current_user
+    @reservation.status = "en attente"
     @reservation.party_place = @party_place
     @reservation.save
     redirect_to profile_path
