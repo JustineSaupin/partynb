@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="profil-card">
+    <div class="profil-image">
+      <%= cl_image_tag @user.picture.key,width: 150, height: 150, crop: :fill %>
+    </div>
+    <div class="profil-infos">
+      <h2> <%= @user.name %></h2>
+      <p><%= @user.email %></p>
+    </div>
+  </div> 
+  
+  <div class="reservations">
+  
+    <div class="reservations-queue">
+      <h3>Mes réservations en attentes:</h3>
+    <div class="card-product">
+    <% @user.reservations.each do |reservation| %>
+    <% if reservation.status == "en attente"  %>
+      <%= cl_image_tag reservation.party_place.picture.key, width: 400, height: 360, crop: :fill %>
+      <div class="card-product-infos">
+        <h2> <%= reservation.party_place.name %></h2>
+        <p><%= reservation.status %></p>
+      </div>
+      <% else %>
+      <div class="card-no-reservation">
+      <p>Vous n'avez pas de réservation en attente</p>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+    </div>
+
+    <div class="reservations-queue">
+      <h3>Mes réservations:</h3>
+      <% @user.reservations.each do |reservation| %>
+    <div class="card-product">
+    <% if reservation.status == "validée" || reservation.status == "refusée" || reservation.status == "annulée" %>
+      <%= cl_image_tag reservation.party_place.picture.key, width: 400, height: 360, crop: :fill %>
+      <div class="card-product-infos">
+        <h2> <%= reservation.party_place.name %></h2>
+        <p><%= reservation.status %></p>
+      </div>
+      <% else %>
+      <div class="card-no-reservation">
+      </div>
+      <% end %>
+      
+    </div>
+    <% end %>
+  </div>
+
+</div>
