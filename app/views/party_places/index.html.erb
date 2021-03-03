@@ -3,16 +3,18 @@
   <div class="row">
     <% @party_places.each do |party_place| %>
       <div class="col-12 col-md-6 col-lg-4  mt-4 mb-4">
-        <div class="card-trip">
-          <%= cl_image_tag party_place.picture.key,width: 400, height: 300, crop: :fill %>
-          <div class="card-trip-infos">
-            <div class="card-trip-content">
-              <h2><%= party_place.name %></h2>
-              <p><%= party_place.address %></p>
+        <%= link_to party_place do %>
+          <div class="card-trip">
+            <%= cl_image_tag party_place.picture.key,width: 400, height: 300, crop: :fill %>
+            <div class="card-trip-infos">
+              <div class="card-trip-content">
+                <h2><%= party_place.name %></h2>
+                <p><%= party_place.address %></p>
+              </div>
+              <%= cl_image_tag party_place.owner.picture.key,width:40, height: 40, crop: :fill, class:"card-trip-user avatar-bordered" %>
             </div>
-            <%= cl_image_tag party_place.owner.picture.key,width:40, height: 40, crop: :fill, class:"card-trip-user avatar-bordered" %>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
