@@ -4,5 +4,8 @@ class Reservation < ApplicationRecord
   belongs_to :renter, class_name: 'User'
   belongs_to :party_place
 
-  validates :status, inclusion: { in: STATUSES }
+  validates :status, inclusion: { in: STATUSES }, presence: true
+
 end
+
+
