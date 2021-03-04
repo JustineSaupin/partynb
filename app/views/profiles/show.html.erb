@@ -8,6 +8,7 @@
       <h2> <%= @user.name %></h2>
       <p><%= @user.email %></p>
     </div>
+
   </div>
 
 <h5>Mes Party Places</h5>
@@ -43,6 +44,7 @@
               <div class="card-product-infos">
                 <p>Vous n'avez pas de réservation en attente</p>
               </div>
+              
           </div>
         <%else%>
           <% @pending.reverse.each do |reservation| %>
