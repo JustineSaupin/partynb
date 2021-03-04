@@ -7,4 +7,12 @@ class PartyPlacesController < ApplicationController
   def index
     @party_places = PartyPlace.all
   end
+
+  def new
+    @party_places = PartyPlace.new
+  end
+
+  def create
+
+  end
 end
