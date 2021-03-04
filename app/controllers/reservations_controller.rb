@@ -13,6 +13,10 @@ class ReservationsController < ApplicationController
     redirect_to profile_path
   end
 
+  def cancel
+  @reservation.status = "en attente"
+  end
+  
   private
 
   def resa_params
