@@ -3,6 +3,7 @@ h1 {
 text-align: center;
 margin : 30px;
 font-weight: lighter;
+font-family: futura;
 color: #6759A3;
 
 }
@@ -23,14 +24,21 @@ color: #6759A3;
   margin-right: 50px;
 }
 
-
-.card-pp h4 {
+.card-pp-descr {
   font-size: 18px;
-  font-weight: bold;
-  margin: 0;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 32px;
+  margin-top: 8px;
 }
 
-.card-pp p {
+i {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6759A3;
+}
+
+.card-pp-price .card-pp-adress {
   font-size: 14px;
   line-height: 1.4;
   opacity: .7;
@@ -38,4 +46,7 @@ color: #6759A3;
   margin-top: 8px;
 }
 
+.btn {
+  font-family: futura;
+}
 
