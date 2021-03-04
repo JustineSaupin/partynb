@@ -2,7 +2,7 @@
 <div class="container mt-4">
   <div class="row">
     <% @party_places.each do |party_place| %>
-      <div class="col-12 col-md-6 col-lg-4  mt-4 mb-4">
+      <div class="col-12 col-md-6 col-lg-4  mt-4 mb-4 link-style">
         <%= link_to party_place do %>
           <div class="card-trip">
             <%= cl_image_tag party_place.picture.key,width: 400, height: 300, crop: :fill %>
@@ -11,7 +11,7 @@
                 <h2><%= party_place.name %></h2>
                 <p><%= party_place.address %></p>
               </div>
-              <%= cl_image_tag party_place.owner.picture.key,width:40, height: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+              <p class= "card-trip-user avatar-bordered"> <%=  party_place.price_per_day %> € </p>
             </div>
           </div>
         <% end %>
