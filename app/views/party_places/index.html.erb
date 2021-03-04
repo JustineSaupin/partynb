@@ -4,7 +4,7 @@
     <% @party_places.each do |party_place| %>
       <div class="col-12 col-md-6 col-lg-4  mt-4 mb-4 link-style">
         <%= link_to party_place do %>
-          <div class="card-trip">
+          <div class="card-trip zoom">
             <%= cl_image_tag party_place.picture.key,width: 400, height: 300, crop: :fill %>
             <div class="card-trip-infos">
               <div class="card-trip-content">
