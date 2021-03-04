@@ -1,14 +1,15 @@
 <div class="banner">
-  <div class="search-bar">
-    <div class="form-outline">
-    <input id="search-bar-input" type="search" id="form1" class="form-control" placeholder="Une ville où faire la teuf!" />
-  </div>
-  <%= link_to party_places_path do %>
-  <button id="search-button" type="button" class="btn btn-primary">
-    <i class="fas fa-search"></i>
-  </button>
+  <!-- Recherche pour filtrer l'index -->
+  <%= form_tag party_places_path, method: :get, class: "mx-auto d-flex w-25 mb-3" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Une ville ou faire la teuf!"
+    %>
+    <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+      <i class="fas fa-search" ></i>
+    <% end %>
   <% end %>
-</div>
 </div>
 <div class="home-container">
 
@@ -27,3 +28,4 @@
 
 
 <%= render 'shared/footer' %>
+
