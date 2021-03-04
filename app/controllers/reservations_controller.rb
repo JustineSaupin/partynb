@@ -13,8 +13,9 @@ class ReservationsController < ApplicationController
     redirect_to profile_path
   end
 
-  def cancel
-  @reservation.status = "en attente"
+  def cancel!
+   @reservation = Reservation.find(params[:reservation_id])
+   @reservation.status = "annulée"
   end
   
   private

@@ -1,28 +1,38 @@
 <div class="container">
-  
-  <div class="profil-card">
-    <div class="profil-image">
-      <%= cl_image_tag @user.picture.key,width: 150, height: 150, crop: :fill %>
+  <div class="row flex">
+    <div class="col-xs-12 col-md-8">
+      <div class="profil-card">
+        <div class="profil-image">
+          <%= cl_image_tag @user.picture.key,width: 150, height: 150, crop: :fill %>
+        </div>
+        <div class="profil-infos">
+          <h2> <%= @user.name %></h2>
+          <p><%= @user.email %></p>
+        </div>
+      </div>
     </div>
-    <div class="profil-infos">
-      <h2> <%= @user.name %></h2>
-      <p><%= @user.email %></p>
+    <div class="col">
+      <%= link_to "Créer un lieu de fête !", new_owner_party_place_path, class: "btn btn-flat" %>
     </div>
-    <%= link_to "Créer un lieu de fête !", new_owner_party_place_path, class: "btn btn-flat" %>
   </div>
+</div>
 
-<h5>Mes Party Places</h5>
+<div class="container">
+  <h5 class="title">Mes Party Places</h5>
   <div class="show-cards">
-<% places = @user.party_places %>
-<% places.each do |place| %>
-<%= link_to place do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path place.picture.key%>')">
-   <%= place.name %>
+    <% places = @user.party_places %>
+    <% places.each do |place| %>
+      <%= link_to place do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path place.picture.key%>')">
+          <%= place.name %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-<% end %>
-<% end %>
-  </div>
+</div>
 
+
+<div class="container mt-5">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mes réservations</a>
@@ -31,13 +41,12 @@
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mes demandes</a>
     </li>
   </ul>
-
   <div class="tab-content">
     <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  
-      <div class="reservations">
-  
-        <div class="reservations-queue">
+
+      <div class="row mt-4">
+
+        <div class="col-xs-12 col-md-6">
           <h5>Mes réservations en cours</h5>
           <% if @pending.empty? %>
             <div class="card-product">
@@ -53,14 +62,14 @@
                 <div class="card-product-infos">
                   <h2> <%= reservation.party_place.name %></h2>
                   <p><%= reservation.status %></p>
-                  <p> Annuler </p>
+                 <p>annuler</p>
                 </div>
               </div>
           <%end%>
         <%end%>
         </div>
 
-        <div class="reservations-queue">
+        <div class="col-xs-12 col-md-6">
           <h5>Mes réservations précédentes</h5>
           <% if @validate.empty? %>
             <div class="card-product">
@@ -84,9 +93,9 @@
   
     </div>
   <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-  <div class="reservations">
+  <div class="row mt-4">
     
-    <div class="reservations-queue">
+    <div class="col-xs-12 col-md-6">
           <h5>En attente de validation</h5>
           <% if @owned_pending.empty? %>
             <div class="card-product">
@@ -101,14 +110,15 @@
                 <div class="card-product-infos">
                   <h2> <%= reservation.party_place.name %></h2>
                   <p><%= reservation.status %></p>
-                  <p> Annuler </p>
+                  <p> Confirmer </p>
+                  <p> Décliner </p>
                 </div>
               </div>
           <%end%>
         <%end%>
         </div>
 
-<div class="reservations-queue">
+  <div class="col-xs-12 col-md-6">
           <h5>Ils ont réservé</h5>
           <% if @owned_validate.empty? %>
             <div class="card-product">
@@ -128,12 +138,22 @@
           <%end%>
         <%end%>
         </div>
-
-
-
   </div>
   </div>
-</div>
+ </div>
 </div>
 
+
+
+
+</div>
+
+
+
+
+  
+
+  
+
+ 
 <%= render 'shared/footer' %>

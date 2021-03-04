@@ -1,3 +1,5 @@
+// Profil
+
 .profil{
 width: 70wv;
 display: flex;
@@ -16,11 +18,66 @@ justify-content: center;
   margin-right: 20px;
 }
 
-.reservations{
-  margin-top: 60px;
+// Bouton create
+.flex{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
+
+// Title Mes party places
+.title{
+  margin-top: 20px;
+}
+
+
+
+
+// Cards Mes Party Places
+.show-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: auto;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+
+// Card Product
 
 .card-product {
   overflow: hidden;
@@ -29,7 +86,7 @@ justify-content: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 40vw;
+  width: auto;
   margin-bottom: 20px;
 }
 
@@ -58,46 +115,3 @@ justify-content: center;
 }
 
 
-
-.show-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  width: 800px;
-  height: 200px;
-}
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .show-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .show-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .show-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .show-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .show-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
