@@ -7,6 +7,7 @@ justify-content: center;
 .profil-card{
   display: flex;
   margin-top: 60px;
+  margin-bottom: 60px;
   align-items: center;
 }
 
@@ -54,4 +55,49 @@ justify-content: center;
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+
+
+.show-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 800px;
+  height: 200px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .show-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
