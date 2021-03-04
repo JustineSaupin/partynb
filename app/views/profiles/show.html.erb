@@ -7,10 +7,11 @@
       <h2> <%= @user.name %></h2>
       <p><%= @user.email %></p>
     </div>
-  </div> 
-  
+
+  </div>
+
   <div class="reservations">
-  
+
     <div class="reservations-queue">
       <h3>Mes réservations en attente:</h3>
         <% if @pending.empty? %>
