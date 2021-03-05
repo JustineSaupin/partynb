@@ -1,3 +1,9 @@
+.show-global{
+  height:80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .pp-show h1 {
 text-align: center;
@@ -49,4 +55,23 @@ color: #6759A3;
 .btn {
   font-family: futura;
 }
+
+
+.img-vinyl{
+   position: absolute;
+   right: -100px;
+   bottom: -100px;
+   width: 300px;
+   height:300px;
+}
+.img-pinte{
+   position: absolute;
+   left: 50px;
+   top: 60px;
+   width: 100px;
+   height: 150px;
+}
+
+
+
 
