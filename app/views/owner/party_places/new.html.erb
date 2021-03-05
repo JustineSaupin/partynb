@@ -2,11 +2,11 @@
 
 <%= simple_form_for([:owner, @party_places]) do |f| %>
 
-  <%= f.input :name %>
-  <%= f.input :address %>
+  <%= f.input :name, label:"Nom" %>
+  <%= f.input :address, label:"Adresse" %>
   <%= f.input :description %>
-  <%= f.input :price_per_day %>
-  <%= f.input :picture %>
+  <%= f.input :price_per_day, label:"Prix par jour" %>
+  <%= f.input :picture, label:"Photo" %>
 
   <%= f.button :submit, "Créer un lieu de fête", class: "btn-flat" %>
 

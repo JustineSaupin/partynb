@@ -20,11 +20,11 @@
 <% if @user.party_places.present? %>
 <div class="container">
   <h5 class="title">Mes Party Places</h5>
-  <div class="show-cards">
+  <div class="show-cards link-style">
     <% places = @user.party_places %>
     <% places.each do |place| %>
       <%= link_to place do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path place.picture.key%>')">
+        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path place.picture.key%>')">
           <%= place.name %>
         </div>
       <% end %>
@@ -55,7 +55,7 @@
               <div class="card-product-infos">
                 <p>Vous n'avez pas de réservation en attente</p>
               </div>
-              
+
           </div>
         <%else%>
           <% @pending.reverse.each do |reservation| %>
@@ -92,11 +92,11 @@
           <%end%>
         </div>
       </div>
-  
+
     </div>
   <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
   <div class="row mt-4">
-    
+
     <div class="col-xs-12 col-md-6">
           <h5>En attente de validation</h5>
           <% if @owned_pending.empty? %>
@@ -157,10 +157,10 @@
               <div class="card-product-infos">
                 <p>Vous n'avez pas de réservation en attente</p>
               </div>
-              
+
           </div>
         <%else%>
-        
+
           <% @pending.reverse.each do |reservation| %>
               <div class="card-product">
                 <%= cl_image_tag reservation.party_place.picture.key, width: 400, height: 360, crop: :fill %>
@@ -195,16 +195,16 @@
           <%end%>
         </div>
       </div>
-  
+
     </div>
     </div>
 <%end%>
 
 
 
-  
 
-  
 
- 
+
+
+
 <%= render 'shared/footer' %>
