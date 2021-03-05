@@ -40,6 +40,8 @@ justify-content: center;
   width: auto;
 }
 
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .show-cards {
@@ -88,6 +90,7 @@ justify-content: center;
   align-items: center;
   width: auto;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .card-product img {
@@ -114,4 +117,49 @@ justify-content: center;
   padding: 16px;
 }
 
+
+.renter_pic img{
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
+  position: absolute;
+  right: 14px;
+  bottom: 33px;
+}
+
+.validate{
+  padding: 5px 10px;
+  background-color: rgb(49, 155, 49);
+  color: white;
+  list-style: none;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.decline{
+  padding: 5px 10px;
+  background-color:rgb(233, 24, 24);
+  color: white;
+  list-style: none;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.decline:hover{
+  text-decoration: none !important;
+  color: rgb(233, 24, 24);
+  background-color: white;
+  border: solid 1px rgb(233, 24, 24);
+}
+
+.pic-activation{
+  text-decoration: none;
+}
+
+.validate:hover{
+  text-decoration: none !important;
+  color: rgb(16, 112, 16);
+  background-color: white;
+  border: solid 1px rgb(16, 112, 16);
+}
 

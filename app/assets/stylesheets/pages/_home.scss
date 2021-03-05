@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: asset-url("party-pool.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url("party-pool.jpg");
   background-size: cover;
   background-position: center;
   height: 80vh;

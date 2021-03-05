@@ -14,7 +14,7 @@
 <div class="home-container">
 
 <h2>Découvrez un lieu unique pour faire la teuf!</h2>
-  <div class="cards">
+  <div class="cards link-style">
 <% places = PartyPlace.all %>
 <% places.first(3).each do |place| %>
 <%= link_to place do %>
