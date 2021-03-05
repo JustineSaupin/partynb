@@ -22,6 +22,12 @@ file = File.open(Rails.root.join('db/seeds/img_users/allan.jpg'))
 allan.picture.attach(io: file, filename: 'allan.jpg', content_type: 'image/jpeg')
 allan.save!
 
+allan2 = User.new(name: 'Allan ', email: 'allanc@mail.com', password: '1234556')
+file = File.open(Rails.root.join('db/seeds/img_users/allan.jpg'))
+allan2.picture.attach(io: file, filename: 'allan.jpg', content_type: 'image/jpeg')
+allan2.save!
+
+
 puts "creating pp..."
 desert_point = PartyPlace.new(owner: justine, name: 'Desert Point', description: 'Un vrai dépaysement dans ce petit bout de désert aux portes de Nantes', address: 'Ile de la Chenaîe, St Julien de Concelles', price_per_day: 200)
 file = File.open(Rails.root.join('db/seeds/img_partyplaces/desert_point.jpg'))
