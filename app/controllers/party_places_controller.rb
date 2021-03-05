@@ -2,6 +2,7 @@ class PartyPlacesController < ApplicationController
   def show
     @party_place = PartyPlace.find(params[:id])
     @reservation = Reservation.new
+    @user = current_user
   end
 
   def index
