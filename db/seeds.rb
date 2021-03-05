@@ -71,7 +71,7 @@ grange.save!
 
 villa_loire = PartyPlace.new(owner: pierre, name: "Villa vue Loire", description: "Cette villa moderne vous surprendra, ici on a la vue Loire la plus prisée de l'ouest! Situé entre la mer et la ville de Nantes, nombreuses activitées sont possibles !", address: 'Quai Eole, 44560 Paimbœuf', price_per_day: 430)
 file = File.open(Rails.root.join('db/seeds/img_partyplaces/villa_loire.jpg'))
-villa_loire.picture.attach(io: file, filename: 'villa_loire.jepg', content_type: 'image/jpeg')
+villa_loire.picture.attach(io: file, filename: 'villa_loire.jpg', content_type: 'image/jpeg')
 villa_loire.save!
 
 foret = PartyPlace.new(owner: geoffrey, name:  "Forêt Fiesta", description: "Cette cabane rénovée, perdue dans la forêt de la Brière, vous accueille pour vos soirées paisibles et calmes. Ici les animaux ne sont pas acpptés, il y en a déjà assez dans la forêt! Situé entre la mer et la ville de Nantes, tout un programme s'offre à vous !", address: '44550 Saint-Malo-de-Guersac', price_per_day: 130)
@@ -90,8 +90,8 @@ plage.picture.attach(io: file, filename: 'plage.jpg', content_type: 'image/jpeg'
 plage.save!
 
 poker = PartyPlace.new(owner: geoffrey, name:  "Chez le G", description: "Plein centre de Nantes, une grosse coloc' bien cool, un frigo toujours plein de bières et une malette de poker à dispo! Alors soirée?", address: '37 rue Chautabriand, 44000 Nantes', price_per_day: 30)
-file = File.open(Rails.root.join('db/seeds/img_partyplaces/poker.jpg'))
-poker.picture.attach(io: file, filename: 'poker.jpg', content_type: 'image/jpeg')
+file = File.open(Rails.root.join('db/seeds/img_partyplaces/poker.png'))
+poker.picture.attach(io: file, filename: 'poker.png', content_type: 'image/png')
 poker.save!
 
 pornichet = PartyPlace.new(owner: allan, name:  "Villa Pornich'", description: "Face à la mer, cette magnifique villa acceuillera vos soirées blanches, champagne shower evening, et autres allégresses! Ambiance luxe assurée, faites le tri dans vos amis et lancez votre soirée huppée!", address: '6 Boulevard René Dubois, 44500 La Baule-Escoublac', price_per_day: 30)
