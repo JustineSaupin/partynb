@@ -23,11 +23,17 @@ color: #6759A3;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.card-pp-infos {
+  margin-right: 30px;
+  margin-top: 80px;
+}
+
 .card-pp-img {
-  height: 100%;
-  width: 350px;
+  height: 300px;
+  width: 375px;
   border-radius: 2px;
   margin-right: 50px;
+  position: relative;
 }
 
 .card-pp-descr {
@@ -56,21 +62,36 @@ color: #6759A3;
   font-family: futura;
 }
 
+.card-pp-img-owner {
+  border-radius: 50%;
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  border: white 1px solid;
+}
 
-.img-vinyl{
-   position: absolute;
-   right: -120px;
-   bottom: -120px;
-   width: 300px;
-   height:300px;
-}
 .img-pinte{
-   position: absolute;
-   left: 50px;
-   top: 60px;
-   width: 100px;
-   height: 150px;
+  position: absolute;
+  left: 50px;
+  top: 450px;
+  width: 100px;
+  height: 150px;
+  animation: 4s linear tourne infinite;
+  transform: rotate(0deg);
+
 }
+
+
+@keyframes tourne {
+   33% {
+    transform: rotate(-20deg);
+
+  }
+  66% {
+    transform: rotate(20deg);
+  }
+}
+
 
 
 
