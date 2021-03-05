@@ -40,8 +40,6 @@ justify-content: center;
   width: auto;
 }
 
-
-
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .show-cards {
@@ -115,6 +113,11 @@ justify-content: center;
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+// Style paragraphe
+.style-para {
+  font-size: 16px !important;
 }
 
 
