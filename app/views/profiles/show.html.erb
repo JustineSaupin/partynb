@@ -52,8 +52,8 @@
           <h5>J'aimerais y faire la fête</h5>
           <% if @pending.empty? %>
             <div class="card-product">
-              <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+              <div class="card-product-infos ">
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
 
           </div>
@@ -77,7 +77,7 @@
           <% if @validate.empty? %>
             <div class="card-product">
               <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
             </div>
           <%else%>
@@ -86,7 +86,7 @@
                 <%= cl_image_tag reservation.party_place.picture.key, width: 400, height: 360, crop: :fill %>
                 <div class="card-product-infos">
                   <h2> <%= reservation.party_place.name %></h2>
-                  <p><%= reservation.status %></p>
+                  <p class="style-status"><%= reservation.status %></p>
                   <p> du <%= reservation.date_begin%> au <%= reservation.date_end%></p>
                 </div>
               </div>
@@ -104,7 +104,7 @@
           <% if @owned_pending.empty? %>
             <div class="card-product">
               <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
           </div>
         <%else%>
@@ -113,7 +113,7 @@
                 <%= cl_image_tag reservation.party_place.picture.key, width: 400, height: 360, crop: :fill %>
                 <div class="card-product-infos">
                   <h2> <%= reservation.party_place.name %></h2>
-                  <p><%= reservation.status %></p>
+                  <p class="style-status"><%= reservation.status %></p>
                   <p> du <%= reservation.date_begin%> au <%= reservation.date_end%></p>
                 </div>
                 <div class="pic-activation">
@@ -132,7 +132,7 @@
           <% if @owned_validate.empty? %>
             <div class="card-product">
               <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
           </div>
         <%else%>
@@ -165,7 +165,7 @@
           <% if @pending.empty? %>
             <div class="card-product">
               <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
 
           </div>
@@ -190,7 +190,7 @@
           <% if @validate.empty? %>
             <div class="card-product">
               <div class="card-product-infos">
-                <p>Vous n'avez pas de réservation en attente</p>
+                <p class="style-para">Vous n'avez pas de réservation en attente</p>
               </div>
             </div>
           <%else%>
