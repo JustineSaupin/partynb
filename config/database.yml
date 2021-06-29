@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  # database: partynb_development
+  database: partynb_development
   adapter: postgresql
   host: localhost
   username: user
